@@ -1,0 +1,64 @@
+<html>
+<head>
+  <title>COMPLAINT REGISTRATION FORM.</title>
+<link rel="stylesheet" type="text/css" href="../libs/form.css">
+<link rel="stylesheet" type="text/css" href="../libs/bootstrap.css">
+</head>
+<body>
+  <form  action="/website" method="POST">
+   <h2><b>FILL THIS FORM TO REGISTER YOUR COMPLAINT.</b></h2> 
+   <table>
+    <tr>
+     <td><b>NAME :</b></td>
+     <td><input type="text" name="Username" required ></td>
+    </tr>
+    <tr>
+     <td><b>GENDER :</b></td>
+     <td>
+      <input type="radio" name="Gender" value="m" required>Male
+      <input type="radio" name="Gender" value="f" required>Female
+     </td>
+    </tr>
+    <tr>
+     <td><b>E-MAIL :</b></td>
+     <td><input type="email" name="email" required></td>
+    </tr> 
+    <tr>
+     <td><b>PHONE NO :</b></td>
+     <td>
+      <select name="PhoneCode" required>
+       <option selected hidden value="select code">Select Code</option>
+       <option value="+91">+91</option>
+       <option value="+92">+92</option>
+       <option value="+97">+97</option>
+      </select>
+      <input type="tel" name="Phone" required>
+     </td>
+    </tr>
+     <tr>
+    <td><b>ADDRESS:</b></td>
+     <td><input type="text" name="Address" required></td>
+    </tr>
+     <tr>
+    <td><b>COMPLAINT FOR WHAT:</b></td>
+     <td><input type="text" name="Your complaint" required></td>
+    </tr>
+     <tr>
+    <td><b>PLACE:</b></td>
+     <td><input type="text" name="place" required></td>
+    </tr>
+     <tr>
+    <td><b>DATE :</b></td>
+     <td><input type="date" name="date" required></td>
+    </tr>
+     <tr>
+       <td><b>TIME :</b></td>
+     <td><input type="time" name="time" required></td>
+    </tr>
+    <tr>
+     <td> <button type="submit" class="btn btn-danger btn-block">Register</button></td>
+    </tr>
+   </table>
+  </form>
+ </body>
+ </html>
