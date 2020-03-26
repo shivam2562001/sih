@@ -1,0 +1,42 @@
+body{
+  background-color:white;
+}
+.fake{
+  text-align:center;
+  background-color:#7bb0b0; 
+
+}
+#button{
+text-align:center;
+color: blue;
+
+}
+input #button{
+background-color:  #e6ffff;
+font-weight:bold;
+border:1px solid black;
+text-align: center; 
+}
+#button:hover{
+background-color:#e6ffff;
+}
+:empty{
+height:40px;
+background:white;
+-moz-border-radius:5%;
+  border-radius:5%;
+}
+:root{
+border-radius: 50px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 100px;
+margin-bottom: auto;
+border:10px solid black;
+margin:100px auto;
+padding:30px;
+background-image:url(../images/bbb.jpg);
+width:550px;
+text-align: center;
+-moz-border-radius:50%;
+}
