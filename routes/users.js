@@ -59,6 +59,9 @@ router.get('/logout', isAuthenticatedUser,(req, res)=> {
   req.flash('success_msg', 'You have been logged out.');
   res.redirect('/login');
 });
+router.get('/password/change', isAuthenticatedUser, (req, res)=> {
+  res.render('changepassword');
+});
 // post request
 router.post('/login', passport.authenticate('local', {
   successRedirect : '/crimeportal',
@@ -87,5 +90,30 @@ router.post('/signup', (req, res)=> {
   });
 
 });
+
+router.post('/password/change', (req, res)=> {
+  if(req.body.password !== req.body.confirmpassword) {
+      req.flash('error_msg', "Password don't match. Type again!");
+      return res.redirect('/password/change');
+  }
+
+  User.findOne({email : req.user.email})
+      .then(user => {
+          user.setPassword(req.body.password, err=>{
+              user.save()
+                  .then(user => {
+                      req.flash('success_msg', 'Password changed successfully.');
+                      res.redirect('/password/change');
+                  })
+                  .catch(err => {
+                      req.flash('error_msg', 'ERROR: '+err);
+                      res.redirect('/password/change');
+                  });
+          });
+      });
+});
+
+
+
 
 module.exports = router;

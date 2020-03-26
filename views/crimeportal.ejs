@@ -7,16 +7,19 @@
 
     <div class="header" id="new">
       <h1><img src="../images/logo.png" id="logo">...::CRIME PORTAL::...</h1>
-      <p></p>
     </div>
     
     <div class="navbar">
+      <% if(currentUser) { %>
       <a href="HOME" class="active">HOME</a>
       <a href="/womenrelatedcrime" target="_blank">WOMEN RELATED CRIME</a>
       <a href="/CHILD" target="_blank">CHILD RELATED CRIME</a>
       <a href="/cyber" target="_blank">CYBER CRIME</a>
       <a href="/contactus" target="_blank" class="right">CONTACT US</a>
+      <a class="nav-link text-white" href="#"><%= currentUser.firstname +" "+ currentUser.lastname %></b></a>
+      <a href="/password/change" class="x">CHANGE PASSWORD</a>
       <a href="/logout" class="x">LOGOUT</a>
+      <% } %>
     </div>
     
     <div class="row">
@@ -36,10 +39,10 @@
     <li><b><u>Mens rea</b> - </u>occurs when the offence is committed with intent or knowledge or recklessness (guilty mind)</li>
     <li><b><u>Actus rea</b> -</u> a wrongful deed</li>
     </ul></p>
-        <img src="Misdemeanor.jpg" style="height:200px;">
-        <img src="felony.jfif" style="height:200px;">
-        <img src="mensrea.jfif" style="height:200px;">
-        <img src="actus-reus.jpg" style="height:200px;">
+        <img src="../images/Misdemeanor.jpg" style="height:200px;">
+        <img src="../images/felony.jfif" style="height:200px;">
+        <img src="../images/mensrea.jfif" style="height:200px;">
+        <img src="../images/actus-reus.jpg" style="height:200px;">
       <div class="footer">
       <p class="footer-links">
               <a href="#">Home</a>
@@ -54,7 +57,6 @@
           &copy; Copyright 2020,ALL RIGHTS RESERVED..
           DaTa PiRaTeS :)
         </div>
-      <h2></h2>
     
     </div>
     <iframe src="https://links.collect.chat/5e33b5c633541d6404e8b510"  width="100%" height="600" frameBorder="0"></iframe>
