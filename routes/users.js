@@ -41,7 +41,14 @@ router.get('/form', isAuthenticatedUser,(req,res)=> {
   res.render('form');
 });
 router.get('/contactus', isAuthenticatedUser,(req,res)=> {
-  res.render('crimeportal');
+  res.render('contactus');
+});
+
+router.get('/Blog', isAuthenticatedUser,(req,res)=> {
+  res.render('Blog');
+});
+router.get('/About', isAuthenticatedUser,(req,res)=> {
+  res.render('About');
 });
 router.get('/womenrelatedcrime',isAuthenticatedUser,(req,res)=> {
   res.render('womenrelatedcrime');
