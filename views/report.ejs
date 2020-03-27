@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>report</title>
+    <link rel="stylesheet" type="text/css" href="../libs/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/cyber.css">
+  </head>
+  <body>
+    <div class="content">
+      <span class="stretched-link btn btn-primary" style="text-decoration: rgb(200, 216, 154); font-style: oblique; text-align: center;"><h1>REPORT</h1></span><br>
+      <br><br>
+      <div class="content">
+        <% reports.forEach((report)=> { %>
+        <% if(report.email == currentUser.email){%>
+        <p>Hi!<%= report.name %>.You have register your complaint with<%= report.email %>.</p><br>
+        <p>address:<%= report.address %></p><br>
+        <h4>your complaint :</h4><br>
+        <p><%= report.complaint %></p><br>
+        <p><%= report.place %></p><br>
+        <p><%= report.time %></p>
+        <%}%>
+        <%})%>
+      </div>
+
+    </div>
+    
+    </body>
+</html>

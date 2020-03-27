@@ -11,8 +11,10 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 //Requiring user route
 const userRoutes = require('./routes/users');
+const reportRoutes = require('./routes/admin');
 // mongoose linking
 const User = require('./models/usermodel');
+//const Report = require('./models/reportmodel');
 
 dotenv.config({path : './config.env'});
 
@@ -55,6 +57,7 @@ app.use(express.static('public'));
 
 
 app.use(userRoutes);
+app.use(reportRoutes);
 
 app.listen(process.env.PORT, ()=> {
     console.log('Server is started');

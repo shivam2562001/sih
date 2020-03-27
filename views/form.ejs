@@ -5,18 +5,19 @@
 <link rel="stylesheet" type="text/css" href="../libs/bootstrap.css">
 </head>
 <body>
-  <form  action="/website" method="POST">
+  <%- include('partials/messages') -%>
+  <form  action="/report" method="POST">
    <h2><b>FILL THIS FORM TO REGISTER YOUR COMPLAINT.</b></h2> 
    <table>
     <tr>
      <td><b>NAME :</b></td>
-     <td><input type="text" name="Username" required ></td>
+     <td><input type="text" name="name" required ></td>
     </tr>
     <tr>
      <td><b>GENDER :</b></td>
      <td>
-      <input type="radio" name="Gender" value="m" required>Male
-      <input type="radio" name="Gender" value="f" required>Female
+      <input type="radio" name="gender" value="m" required>Male
+      <input type="radio" name="gender" value="f" required>Female
      </td>
     </tr>
     <tr>
@@ -26,22 +27,22 @@
     <tr>
      <td><b>PHONE NO :</b></td>
      <td>
-      <select name="PhoneCode" required>
+      <select name="phonecode" required>
        <option selected hidden value="select code">Select Code</option>
        <option value="+91">+91</option>
        <option value="+92">+92</option>
        <option value="+97">+97</option>
       </select>
-      <input type="tel" name="Phone" required>
+      <input type="tel" name="phone" required>
      </td>
     </tr>
      <tr>
     <td><b>ADDRESS:</b></td>
-     <td><input type="text" name="Address" required></td>
+     <td><input type="text" name="address" required></td>
     </tr>
      <tr>
     <td><b>COMPLAINT FOR WHAT:</b></td>
-     <td><input type="text" name="Your complaint" required></td>
+     <td><input type="text" name="complaint" required></td>
     </tr>
      <tr>
     <td><b>PLACE:</b></td>

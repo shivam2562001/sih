@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <title>Forgot Password</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/loginstyle.css">
+  <link rel="stylesheet" type="text/css" href="../libs/bootstrap.css">
+
+</head>
+
+<body>
+  <div class="container"></div>
+  <h1 class="text-center mt-5 mb-3">Reset Your Password</h1>
+  <%- include('partials/messages') -%>
+          <form action="/forgot" method="POST">
+      
+              <div class="form-group px-0">
+                  <input type="email" name="email" class="form-control" placeholder="Enter Email Address">
+              </div>
+              <button type="submit" class="btn btn-danger btn-block">Send Email</button>
+          </form>
+          <a class="float-center" href="/login">Back to Login</a>
+  </div>
+</body>
+</html>
